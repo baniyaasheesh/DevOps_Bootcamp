@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup form</title>
+</head>
+<body>
+    <P>Hey Welcome to my singup page</P>
+    <p>Today is {{ day }}</p>
+    <p>Current time is {{ time }}</p>
+
+    <div class="center">
+        <form action="/submit" method="POST" class="login-form">
+            <h2>Login Form</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <label for="remember">
+                <input type="checkbox" id="remember" name="remember"> Remember Me
+            </label>
+            <br>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+    <style>
+        body {
+            background-color: #510505;
+            font-family: Arial, sans-serif;
+            color: #dfdada;
+        }
+        p {
+            font-size: 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+        }
+        .login-form {
+            background: #fff;
+            color: #333;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            border: 2px solid #510505;
+            min-width: 300px;
+        }
+        .login-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .login-form label {
+            display: block;
+            margin-top: 10px;
+        }
+        .login-form input[type="text"],
+        .login-form input[type="email"],
+        .login-form input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login-form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background: #510505;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .login-form input[type="submit"]:hover {
+            background: #7a1a1a;
+        }
+    </style>
+</body>
+</html>
